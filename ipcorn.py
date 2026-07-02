@@ -1,4 +1,4 @@
-#coded by N2838RO (sina Hacker)
+#coded by N2838 《■》KINGHacker《■》
 
 #modules required
 import argparse
@@ -6,43 +6,63 @@ import requests, json
 import sys
 from sys import argv
 import os
+import time
+#colours used
+red = '\033[31m'
+yellow = '\033[93m'
+green = '\033[92m'
+reset = '\033[0m'
+bold = '\033[01m'
+cyan = '\033[96m'
+
+#banner of script
+jo = f"""{green}
+                 _,__        .:
+         Darwin <*  /        | \
+            .-./     |.     :  :,
+           /           '-._/     \_
+          /                '       \
+        .'                         *: Brisbane
+     .-'                             ;
+     |                               |
+     \                              /
+      |                            /
+Perth  \*        __.--._          /
+        \     _.'       \:.       |
+        >__,-'             \_/*_.-'
+
+                              Melbourne
+
+     snd                     :--,
+
+                              '/
+
+                              
+                              IPCORN
+                     《■》KINGHacker《■》
+"""
+print(jo, end=" ", flush=True)
+time.sleep(0.090)
+
+print("""
+
+""")
+print(f"{red}[!]{green}RUBIKA{reset}\_____/{yellow}https://rubika.ir/KINGHacker051s{reset}")
+time.sleep(3)
 
 #arguments and parser
 
 parser = argparse.ArgumentParser()
 
-parser.add_argument ("-s", help= "target/host IP address", type=str, dest='target', required=True )
+parser.add_argument ("-I", help= "target/host IP address", type=str, dest='target', required=True )
 
 args = parser.parse_args()
-
-#colours used
-red = '\033[31m'
-yellow = '\033[93m'
-lgreen = '\033[92m'
-clear = '\033[0m'
-bold = '\033[01m'
-cyan = '\033[96m'
-
-#banner of script
-print (yellow+""" 
-
-《《《《《《《■■■sina hacker■■■》》》》》》》
-
-"""+yellow)
-
-
-print (lgreen+bold+"         <===[[ sinahacker ]]===> \n"+clear)
-print (yellow+bold+"   <---(( search on robika Hacker089 ))--> \n"+clear)
-
-
-ip = args.target
-
 api = "http://ip-api.com/json/"
-
+ip = args.target
 try:
         data = requests.get(api+ip).json()
         sys.stdout.flush()
-        a = lgreen+bold+"[$]"
+        a = green+bold+"[$]"
         b = cyan+bold+"[$]"
         print (a, "[Victim]:", data['query'])
         print(red+"<--------------->"+red)
